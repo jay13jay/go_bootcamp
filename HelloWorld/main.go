@@ -2,18 +2,26 @@ package main
 
 import (
 	"fmt"
+	"time"
 
-	"github.com/jay13jay/go_bootcamp/testlibrary"
+	"github.com/jay13jay/go_bootcamp/newlib"
 )
 
-func sayHello(name string, age int) {
-	fmt.Printf("Hello, %v", name)
-	fmt.Printf("\nThis programs says you are %v years old\n", age)
+func sayHello(name string) {
+	fmt.Printf("Hello, %v\n", name)
 }
 
 func main() {
-	sayHello("Josh", 30)
+	var (
+		now time.Time
+	)
+	now = time.Now()
+	sayHello("Josh")
+	fmt.Printf("the current time is:\t %v\n", now)
 
-	// Use imported library
-	testlibrary.Name()
+	// Use imported librarys
+	newlib.Name()
+	fmt.Println("\n System Information")
+	fmt.Printf("Go version:\t%v\n", newlib.Goversion())
+	fmt.Printf("# of CPU's:\t%d\n", getcpus())
 }
