@@ -1,12 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/jay13jay/go_bootcamp/testlibrary"
+)
 
 func sayHello(name string, age int) {
-	fmt.Println("Hello,", name)
-	fmt.Printf("This programs says you are %v years old\n", age)
+	fmt.Printf("Hello, %v", name)
+	fmt.Printf("\nThis programs says you are %v years old\n", age)
 }
 
 func main() {
 	sayHello("Josh", 30)
+
+	// Use imported library
+	testlibrary.Name()
 }
