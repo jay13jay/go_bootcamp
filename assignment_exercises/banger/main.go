@@ -10,8 +10,9 @@ var word string
 
 func printbang(word string) {
 	banger := strings.Repeat("!", len(word))
-	fmt.Printf("%s%s\n", word, banger)
-	// fmt.Printf("%s%s%s\n", banger, word, banger)
+	word = strings.ToUpper(word)
+	// fmt.Printf("%s%s\n", word, banger)
+	fmt.Printf("%s%s%s\n", banger, word, banger)
 
 }
 
